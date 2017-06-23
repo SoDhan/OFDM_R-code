@@ -1,7 +1,6 @@
-aw <- function(s, snr) {
+aw <- function(s, snr, f) {
   
-  s=c(s)
-  x = noisew(1000,length(s)/1000,type = "gaussian",listen = FALSE,output = "array")
+  x = noisew(f,length(s)/f,type = "gaussian", output = "array")
   
   np = sum(abs(x[1:length(x)])) ^ 2 / length(x)
   
